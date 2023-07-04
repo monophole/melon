@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    border-radius: 12px;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    inset: -3px;
+    z-index: -1;
+    background: linear-gradient( 45deg, red, yellow, blue, green);
+    box-shadow: 0 0 0 20px black;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    inset: -3px;
+    z-index: -1;
+    background: linear-gradient(
+        45deg, red, yellow, blue, green);
+    box-shadow: 0 0 0 20px black;
+    filter: blur(20px);
+}
+
